@@ -1,8 +1,6 @@
-variable "name" { type = string }
-
-variable "engine" { type = string }
-
-variable "engine_version" { type = string }
+variable "name"               { type = string }
+variable "engine"             { type = string }   # postgres | mysql | aurora-postgresql | aurora-mysql
+variable "engine_version"     { type = string }
 
 variable "use_aurora" {
   type    = bool
@@ -14,8 +12,7 @@ variable "instance_class" {
   default = "db.t3.medium"
 }
 
-variable "vpc_id" { type = string }
-
+variable "vpc_id"             { type = string }
 variable "private_subnet_ids" { type = list(string) }
 
 variable "allowed_cidr_blocks" {

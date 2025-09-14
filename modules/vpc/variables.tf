@@ -1,15 +1,13 @@
-variable "bucket_name" {
+variable "name" {
   type = string
 }
-
-variable "dynamodb_table_name" {
+variable "cidr_block" {
   type = string
 }
-
-variable "region" {
-  type = string
+variable "az_count" {
+  type    = number
+  default = 2
 }
-
 variable "tags" {
   type    = map(string)
   default = {}
